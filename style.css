@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-image: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top 0% center;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 45px;
+}
+
+.back-card, .front-card {
+    position: absolute;
+    width: 286px;
+    height: 157px;
+    z-index: 1;
+    border-radius: 6px;
+    background-size: cover;
+    display: flex;
+}
+
+.back-card {
+    top: 32px;
+    right: 16px;
+    background-image: url(./images/bg-card-back.png);
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 37px;
+}
+
+.front-card {
+    top: 126.4px;
+    left: 17px;
+    background-image: url(./images/bg-card-front.png);
+    padding: 17px 20px 20px 19px;
+    flex-direction: column;
+    justify-content: space-between;
+    filter: drop-shadow(0px 39px 60px rgba(0, 0, 0, 0.142481));
+}
+
+.circles {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.circle-big {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+}
+.circle-small {
+    width: 13.5px;
+    height: 13.5px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.on-card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+#on-card-number {
+    padding-top: 37px;
+    padding-bottom: 17px;
+}
+
+.form {
+    margin-top: 331px;
+    padding: 0 24px 28px 24px;
+}
+
+.card-detals {
+    z-index: 2;
+}
+
+.card-images h3, p {
+    color: white;
+}
+
+
+.card-images h3 {
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2.2px;
+}
+
+.card-images p {
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+input:focus {
+    outline: 0;
+
+}
+
+.name-field, .number-field, .month-field, .year-field, .cvc-field {
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+}
+
+.name-field, .number-field {
+    padding-bottom: 20px;
+}
+
+.label-name, .label-number, .label-month, .label-year, .label-cvc {
+    text-transform: uppercase;
+    color: #21092F;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+}
+
+.last-detals {
+    display: flex;
+    column-gap: 8px;
+}
+
+#month, #year {
+    width: 72px;
+    height: 45px;
+}
+
+#cvc {
+    width: 164px;
+    height: 45px;
+}
+
+#name, #card-number {
+    width: 327px;
+    height: 45px;
+}
+
+#month, #year, #name, #card-number, #cvc {
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    padding: 11px 15px;
+    transition: all .3s linear;
+    color: #21092F;
+}
+
+#month::placeholder, #year::placeholder, #name::placeholder, #card-number::placeholder, #cvc::placeholder {
+    color: #21092F;
+    opacity: 25%;
+}
+
+#month:focus, #year:focus, #name:focus, #card-number:focus,
+#cvc:hover, #month:hover, #year:hover, #name:hover, #card-number:hover, #cvc:hover {
+        border: double 1px transparent;
+        border-radius: 8px;
+        background-image: linear-gradient(white, white),
+            linear-gradient(to top, #610595, #6348fe);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+}
+
+.btn, .btn-continue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #21092F;
+    border: 0;
+    color: white;
+    width: 327px;
+    height: 53px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    cursor: pointer;
+    transition: background .3s linear;
+    transition: color .3 ease;
+}
+
+.btn:active, .btn-continue:active {
+    transform: scale(.97);
+} 
+
+.btn:hover, .btn-continue:hover {
+    /* background-color: hsl(279, 6%, 55%, 0.5); */
+    background-image: linear-gradient(90deg, rgba(143, 134, 148, 0.4) 0%, rgba(33, 9, 47, 0.5) 100%);
+    /* color: #21092F; */
+    /* filter: ; */
+} 
+
+/*  */
+
+.added-container {
+    margin-top: 331px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: none;
+}
+
+.added-container h1 {
+    text-transform: uppercase;
+    padding-top: 35px;
+    padding-bottom: 16px;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 3.42px;
+    color: #21092F;
+}
+
+.added-container h2 {
+    padding-bottom: 48px;
+    font-size: 18px;
+    line-height: 23px;
+    color: #8F8694;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Errors */
+
+h5 {
+    color: #FF5050;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: none;
+}
+
+.on-card-dates {
+    display: flex;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+    background-image: url(./images/bg-main-desktop.png);
+    background-position: left center;
+}
+
+
+.back-card, .front-card {
+    width: 447px;
+    height: 245px;
+}
+
+.back-card {
+    top: 469px;
+    left: 258px;
+    filter: drop-shadow(0px 39px 60px rgba(0, 0, 0, 0.142481));
+    padding-right: 57px;
+}
+
+.front-card {
+    top: 187px;
+    left: 164px;
+    padding: 28px 32px 27px 32px;
+}
+
+.main-container {
+    margin-left: 622px;
+    padding: 0;
+}
+
+.form {
+    padding: 0;
+    padding-bottom: 26px;
+}
+
+#on-card-number {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 3.42222px;
+    padding-top: 64px;
+    padding-bottom: 25.5px;
+}
+
+.circle-big {
+    width: 47px;
+    height: 47px;
+}
+
+.circle-small {
+    width: 21px;
+    height: 21px;
+}
+
+.card-images p {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+#name, #card-number {
+    width: 381px;
+}
+
+#month,
+#year {
+    width: 80px;
+}
+
+#cvc {
+    width: 191px;
+}
+
+.last-detals {
+    column-gap: 15px;
+}
+
+.btn, .btn-continue {
+    width: 381px;
+
+}
+
+.added-container {
+    margin-top: 305px;
+    margin-left: 622px;
+    display: none;
+    padding: 0;
+}
+
+
+
+}
