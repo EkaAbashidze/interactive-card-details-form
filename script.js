@@ -19,8 +19,6 @@ month.setAttribute("max", "12");
 year.setAttribute("min", "0");
 year.setAttribute("max", "2035");
 
-
-
 form.addEventListener("submit", confirmForm);
 
 cardNumber.addEventListener("input", () => validateCard(cardNumber, errors[0]));
@@ -107,9 +105,8 @@ function validateCard(input, err) {
     }
 }
 
-
-function confirmForm() {
-
+function confirmForm(e) {
+    e.preventDefault();
     if ((userName && userName.value) &&
         (cardNumber && cardNumber.value) &&
         (month && month.value) &&
@@ -125,5 +122,5 @@ function confirmForm() {
             onCardCvc.innerHTML = cvc.value;
             onCardMonth.innerHTML = month.value + "/";
             onCardYear.innerHTML = year.value;
-        };  
+        };
 };
