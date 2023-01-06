@@ -12,10 +12,16 @@ const onCardOwner = document.getElementById("on-card-owner");
 const onCardCvc = document.getElementById("on-card-cvc");
 const onCardMonth = document.getElementById("on-card-expiry-month");
 const onCardYear = document.getElementById("on-card-expiry-year");
+const form = document.getElementById("form");
 
-console.log(onCardCvc);
+month.setAttribute("min", "1");
+month.setAttribute("max", "12");
+year.setAttribute("min", "0");
+year.setAttribute("max", "2035");
 
-confirm.addEventListener("click", confirmForm);
+
+
+form.addEventListener("submit", confirmForm);
 
 cardNumber.addEventListener("input", () => validateCard(cardNumber, errors[0]));
 
@@ -115,71 +121,9 @@ function confirmForm() {
             const value = cardNumber.value;
             const chunks = value.match(/.{1,4}/g);
             onCardNumber.innerHTML = chunks.join(" ");
-            // onCardNumber.innerHTML = cardNumber.value;
             onCardOwner.innerHTML = userName.value;
             onCardCvc.innerHTML = cvc.value;
             onCardMonth.innerHTML = month.value + "/";
             onCardYear.innerHTML = year.value;
-            console.log("Hello");
         };  
 };
-
-
-
-    // validateLength(cardNumber, errors[0]);
-
-// function validateLength(input, err) {
-//     if (input.value.length === 16) {
-//         err.style.display = "none";
-//         input.style.backgroundImage = "linear-gradient(white, white), linear-gradient(to top, #610595, #6348fe)";
-//         input.style.border = "double 1px transparent";
-//     } else {
-//         err.style.display = "block";
-//         err.innerText = "There should be 16 digits";
-//         input.style.border = "1px solid #FF5050";
-
-//     };
-// }
-
-
-
-
-// cardNumber.addEventListener("input", () => {
-//     validate(cardNumber, error1);
-//     console.log(cardNumber.value);
-// });
-
-
-
-    // if (cardNumber.value.includes("e") || cardNumber.value.includes("-")) {
-    //     errors[0].style.display = "block";
-    // } else {
-    //     errors[0].style.display = "none";
-    // }
-
-
-
-
-    // if (cardNumber.value.includes("-") || cardNumber.value.includes("e")) {
-    //     errors[0].style.display = "block";} 
-
-
-
-
-
-
-
-
-
-
-
-// userName.addEventListener("input", updateValue);
-// cardNumber.addEventListener("input", updateValue);
-// month.addEventListener("input", updateValue);
-// year.addEventListener("input", updateValue);
-// cvc.addEventListener("input", updateValue);
-
-// function updateValue(e) {
-//   console.log(e.target.value);
-// }
-

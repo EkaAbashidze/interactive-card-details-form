@@ -256,6 +256,10 @@ h5 {
     display: flex;
 }
 
+.btn {
+    margin-top: 26px;
+}
+
 @media screen and (min-width: 1440px) {
     body {
     background-image: url(./images/bg-main-desktop.png);
@@ -288,7 +292,6 @@ h5 {
 
 .form {
     padding: 0;
-    padding-bottom: 26px;
 }
 
 #on-card-number {
